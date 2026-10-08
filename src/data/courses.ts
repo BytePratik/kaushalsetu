@@ -15,10 +15,30 @@ export const COURSES_CATALOG: Course[] = [
     description: 'Learn modern web standards, HTML5 semantic layout, CSS flexbox/grid, and JavaScript DOM manipulation.',
     skillsTaught: ['HTML5 & CSS3', 'JavaScript', 'Tailwind CSS'],
     modules: [
-      { title: 'Module 1: HTML5 Semantics & Structure', duration: '3 hrs', articleContent: 'Understand modern HTML5 tags like header, main, section, nav, footer, and form controls.' },
-      { title: 'Module 2: CSS3 Grid & Flexbox Mastering', duration: '5 hrs', articleContent: 'Build complex responsive web layouts effortlessly using CSS Grid and Flexbox.' },
-      { title: 'Module 3: JavaScript Core Fundamentals', duration: '8 hrs', articleContent: 'Variables, loops, functions, array methods (map, filter, reduce), promises, and async/await.' },
-      { title: 'Module 4: Practical Capstone Website', duration: '8 hrs', articleContent: 'Build and style an interactive web dashboard with DOM events.' }
+      {
+        title: 'Module 1: HTML5 Semantics & Structure',
+        duration: '3 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/pQN-pnXPaVg',
+        articleContent: 'Understand modern HTML5 semantic elements like header, main, section, nav, footer, forms, and input validation.'
+      },
+      {
+        title: 'Module 2: CSS3 Grid & Flexbox Mastering',
+        duration: '5 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/3YW65K6LcIA',
+        articleContent: 'Build complex responsive layouts effortlessly using CSS Grid and Flexbox alignment rules.'
+      },
+      {
+        title: 'Module 3: JavaScript Core Fundamentals',
+        duration: '8 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/hdI2bqOjy3c',
+        articleContent: 'Master variables, loops, array methods (map, filter, reduce), DOM events, and Async/Await in JavaScript.'
+      },
+      {
+        title: 'Module 4: Practical Capstone Website',
+        duration: '8 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/zJSY8tbf_ys',
+        articleContent: 'Build and style a full interactive web dashboard with DOM events and local storage.'
+      }
     ]
   },
   {
@@ -35,9 +55,24 @@ export const COURSES_CATALOG: Course[] = [
     description: 'Design beautiful, glassmorphic, responsive user interfaces rapidly with utility-first Tailwind CSS.',
     skillsTaught: ['Tailwind CSS', 'HTML5 & CSS3'],
     modules: [
-      { title: 'Module 1: Utility Classes & Configuration', duration: '3 hrs' },
-      { title: 'Module 2: Dark Mode & Glassmorphism', duration: '4 hrs' },
-      { title: 'Module 3: Responsive Breakpoints & Animations', duration: '5 hrs' }
+      {
+        title: 'Module 1: Utility Classes & Setup',
+        duration: '3 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/dFgzHOX84xQ',
+        articleContent: 'Learn Tailwind utility classes, custom theme spacing, colors, and configuration.'
+      },
+      {
+        title: 'Module 2: Dark Mode & Responsive Layouts',
+        duration: '4 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/_9mTJ84uL1Q',
+        articleContent: 'Implement dark mode toggles, micro-animations, and fluid responsive design breakpoints.'
+      },
+      {
+        title: 'Module 3: Advanced UI Components & Micro-Interactions',
+        duration: '5 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/ft30zcMlFao',
+        articleContent: 'Build sleek modern navigation bars, cards, modals, and interactive drop-downs with Tailwind.'
+      }
     ]
   },
   {
@@ -54,10 +89,30 @@ export const COURSES_CATALOG: Course[] = [
     description: 'Master React 18+, Server Components, Next.js App Router, state management, and Server Actions.',
     skillsTaught: ['React.js', 'Next.js', 'TypeScript', 'JavaScript'],
     modules: [
-      { title: 'Module 1: React State & Custom Hooks', duration: '8 hrs' },
-      { title: 'Module 2: Next.js App Router Architecture', duration: '10 hrs' },
-      { title: 'Module 3: TypeScript with React', duration: '7 hrs' },
-      { title: 'Module 4: Full Stack CRUD & Vercel Deployment', duration: '10 hrs' }
+      {
+        title: 'Module 1: React State & Hooks',
+        duration: '8 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/w7ejDZ8SWv8',
+        articleContent: 'Learn useState, useEffect, useContext, custom hooks, and component lifecycle in React.'
+      },
+      {
+        title: 'Module 2: Next.js App Router Architecture',
+        duration: '10 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/wm5gMKCORL4',
+        articleContent: 'Build server-side rendered pages using Next.js 14+ App Router, layouts, and API routes.'
+      },
+      {
+        title: 'Module 3: TypeScript with React',
+        duration: '7 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/SqcY0GlETPk',
+        articleContent: 'Add strict type safety to React props, component states, and async API requests with TypeScript.'
+      },
+      {
+        title: 'Module 4: Full Stack CRUD & Deployment',
+        duration: '10 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/Zq5fmkH0T78',
+        articleContent: 'Deploy full stack web applications on Vercel with database connections.'
+      }
     ]
   },
   {
@@ -74,10 +129,30 @@ export const COURSES_CATALOG: Course[] = [
     description: 'Construct secure RESTful APIs, JWT authentication, SQL database queries, and indexing performance.',
     skillsTaught: ['Node.js', 'SQL & Database Design', 'REST API & GraphQL'],
     modules: [
-      { title: 'Module 1: Node.js & Express Fundamentals', duration: '7 hrs' },
-      { title: 'Module 2: Relational Databases & SQL Queries', duration: '9 hrs' },
-      { title: 'Module 3: Authentication & Security Best Practices', duration: '6 hrs' },
-      { title: 'Module 4: API Deployment & Testing', duration: '6 hrs' }
+      {
+        title: 'Module 1: Node.js & Express Fundamentals',
+        duration: '7 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/Oe421EPjeBE',
+        articleContent: 'Build backend HTTP server APIs using Express.js, routing, and middleware.'
+      },
+      {
+        title: 'Module 2: Relational Databases & SQL Queries',
+        duration: '9 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/HXV3zeQKqGY',
+        articleContent: 'Write relational SQL queries, joins, indexes, transactions, and foreign key relations.'
+      },
+      {
+        title: 'Module 3: Authentication & Security Best Practices',
+        duration: '6 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/mbsmsi7l3r4',
+        articleContent: 'Implement JWT tokens, bcrypt password hashing, and API authorization middleware.'
+      },
+      {
+        title: 'Module 4: API Testing & Deployment',
+        duration: '6 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/rltfdjcXjmk',
+        articleContent: 'Test REST APIs with Postman, handle error logging, and deploy to cloud servers.'
+      }
     ]
   },
   {
@@ -94,9 +169,24 @@ export const COURSES_CATALOG: Course[] = [
     description: 'Master Python, Pandas, NumPy, Scikit-Learn, and build predictive machine learning models.',
     skillsTaught: ['Python', 'SQL & Database Design', 'Machine Learning Basics'],
     modules: [
-      { title: 'Module 1: Python Essentials & Data Structures', duration: '8 hrs' },
-      { title: 'Module 2: Data Manipulation with Pandas & NumPy', duration: '10 hrs' },
-      { title: 'Module 3: Machine Learning Algorithms with Scikit-Learn', duration: '14 hrs' }
+      {
+        title: 'Module 1: Python Essentials & Data Structures',
+        duration: '8 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/rfscVS0vtbw',
+        articleContent: 'Python syntax, lists, dictionaries, object-oriented programming, and file handling.'
+      },
+      {
+        title: 'Module 2: Data Analysis with Pandas & NumPy',
+        duration: '10 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/vmEHCJofslg',
+        articleContent: 'Clean datasets, calculate statistics, and plot visualizations with Pandas and Matplotlib.'
+      },
+      {
+        title: 'Module 3: Machine Learning with Scikit-Learn',
+        duration: '14 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/7eh4d6sabA0',
+        articleContent: 'Train regression, classification, and clustering machine learning models.'
+      }
     ]
   },
   {
@@ -113,9 +203,25 @@ export const COURSES_CATALOG: Course[] = [
     description: 'Design interactive mobile & web prototypes, create scalable design systems, and present to clients.',
     skillsTaught: ['UI/UX Design & Figma', 'Communication & Presentation'],
     modules: [
-      { title: 'Module 1: Design Principles & Figma Layouts', duration: '6 hrs' },
-      { title: 'Module 2: Wireframing & Interactive Prototyping', duration: '8 hrs' },
-      { title: 'Module 3: Design Systems & Hand-off', duration: '6 hrs' }
+      {
+        title: 'Module 1: Design Principles & Figma Layouts',
+        duration: '6 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/c9Wg6Cb_YlU',
+        articleContent: 'Learn Figma tools, auto-layout, typography hierarchy, and color palettes.'
+      },
+      {
+        title: 'Module 2: Interactive Wireframing & Prototyping',
+        duration: '8 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/FTFaQWZBqQ8',
+        articleContent: 'Create interactive click-through prototypes and component variants.'
+      },
+      {
+        title: 'Module 3: Design Systems & Developer Hand-off',
+        duration: '6 hrs',
+        videoUrl: 'https://www.youtube-nocookie.com/embed/gu0qR-rG3i0',
+        articleContent: 'Build scalable design systems and export specifications for frontend developers.'
+      }
     ]
   }
 ];
+

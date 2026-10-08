@@ -56,39 +56,76 @@ export default function CourseDetailPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* LEFT COLUMN: LESSON VIEWER */}
         <div className="lg:col-span-2 space-y-6">
-          {/* Mock Video Player */}
-          <div className="aspect-video bg-slate-900 border border-slate-800 rounded-xl overflow-hidden relative flex flex-col items-center justify-center space-y-3 shadow-sm">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center">
-              <PlayCircle className="w-10 h-10" />
+          {/* Interactive Course Video Player */}
+          <div className="space-y-3">
+            <div className="aspect-video bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-md relative group">
+              {currentModule.videoUrl ? (
+                <iframe
+                  src={currentModule.videoUrl}
+                  title={`${course.title} - ${currentModule.title}`}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center space-y-3 bg-gradient-to-b from-slate-900 to-slate-950">
+                  <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center">
+                    <PlayCircle className="w-10 h-10" />
+                  </div>
+                  <div className="space-y-1">
+                    <span className="text-xs text-emerald-400 font-bold uppercase tracking-wider">
+                      Module {activeModuleIndex + 1}: {currentModule.title}
+                    </span>
+                    <h2 className="text-base font-bold text-white">{course.title}</h2>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="text-center space-y-1 px-4">
-              <span className="text-xs text-emerald-400 font-bold uppercase tracking-wider">
-                Module {activeModuleIndex + 1}: {currentModule.title}
-              </span>
-              <h2 className="text-base font-bold text-white">{course.title}</h2>
+
+            {/* Video Controls & Mode Status Bar */}
+            <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-lg bg-white border border-slate-200 text-xs">
+              <div className="flex items-center gap-2 text-[#166534] font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Live Course Video Stream Enabled</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-600">
+                <span>Instructor: <strong className="text-slate-900">{course.instructor}</strong></span>
+                <span>•</span>
+                <span>Level: <strong className="text-slate-900">{course.level}</strong></span>
+              </div>
             </div>
           </div>
 
           {/* Module Reading & Description */}
           <div className="p-6 rounded-xl bg-white border border-slate-200 space-y-4 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold text-[#1E293B]">{currentModule.title}</h3>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <span className="text-[10px] font-bold text-[#166534] uppercase tracking-wider">
+                  Lesson Module {activeModuleIndex + 1}
+                </span>
+                <h3 className="text-lg font-bold text-[#1E293B]">{currentModule.title}</h3>
+              </div>
               <button
                 onClick={() => toggleModuleCompletion(activeModuleIndex)}
-                className={`px-3.5 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all ${
+                className={`px-4 py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1.5 transition-all ${
                   completedModules.includes(activeModuleIndex)
-                    ? 'bg-[#166534] text-white'
+                    ? 'bg-[#166534] text-white shadow-sm'
                     : 'bg-slate-100 border border-slate-300 text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 <CheckCircle2 className="w-4 h-4" />
-                <span>{completedModules.includes(activeModuleIndex) ? 'Completed ✓' : 'Mark as Completed'}</span>
+                <span>{completedModules.includes(activeModuleIndex) ? 'Completed ✓' : 'Mark Lesson Completed'}</span>
               </button>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed">
-              {currentModule.articleContent ||
-                'In this lesson, you will master practical implementation patterns and complete hands-on exercises.'}
-            </p>
+            <div className="pt-2 border-t border-slate-100">
+              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">
+                Lesson Overview & Hands-on Notes
+              </h4>
+              <p className="text-xs text-slate-700 leading-relaxed">
+                {currentModule.articleContent ||
+                  'In this lesson, you will master practical implementation patterns and complete hands-on code exercises.'}
+              </p>
+            </div>
           </div>
         </div>
 
